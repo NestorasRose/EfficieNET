@@ -1,18 +1,32 @@
-﻿using System;
+﻿using Fluent.Infrastructure.FluentModel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using VRtour.Lib.Enums;
 
 namespace VRtour.Lib.Models
 {
-    public class Houses
+    public class RealEstate
     {
+        public RealEstate()
+        {
+            CreatedDate = DateTime.Now;
+        }
+
+        [Key]
+        public string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
+
         public decimal Price { get; set; }
 
-        public List<string> VRtours { get; set; }
+        public List<string> VRtourURLs { get; set; }
 
         public CyprusCityEnum City { get; set; }
 
-        public AreaEnum Area { get; set; }
+        public CyprusAreaEnum Area { get; set; }
 
         public TypeEnum Type { get; set; }
 
@@ -49,5 +63,9 @@ namespace VRtour.Lib.Models
         public bool HasStorageRoom { get; set; }
 
         public bool HasSauna { get; set; }
+
+        public DateTime CreatedDate { get; set; }
+
+        public DateTime UpdatedDate { get; set; }
     }
 }

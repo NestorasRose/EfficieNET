@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using VRtour.Lib.Models;
 
 namespace EfficieNET.Data
 {
@@ -12,5 +13,10 @@ namespace EfficieNET.Data
             : base(options)
         {
         }
+        public DbSet<BuyRealEstate> Buy { get; set; }
+
+        public DbSet<RentRealEstate> Rent { get; set; }
+
+        public DbSet<BookRealEstate> Book { get; set; }
     }
 }
