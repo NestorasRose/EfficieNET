@@ -20,7 +20,7 @@ namespace VRtour.Lib.Models
 
         public decimal Price { get; set; }
 
-        public List<string> VRtourURLs { get; set; }
+        public string VRtourURL { get; set; }
 
         public CyprusCityEnum City { get; set; }
 

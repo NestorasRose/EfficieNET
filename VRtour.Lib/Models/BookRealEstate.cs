@@ -11,6 +11,6 @@ namespace VRtour.Lib.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public List<DateTime> BookedDates { get; set; }
+        //public ICollection<DateTime> BookedDates { get; set; }
     }
 }

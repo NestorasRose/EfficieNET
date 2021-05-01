@@ -1,0 +1,179 @@
+﻿@model IEnumerable<VRtour.Lib.Models.BuyRealEstate>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VRtourURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Area)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Condition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlotSizeSquareMeters)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfParkingSpaces)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfBalconies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfAirCondition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfBedrooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfBathrooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsFurnishing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasPool)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasGarden)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasElevator)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasAlarm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasFireplace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasPlayroom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasAtticLoft)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasStorageRoom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasSauna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VRtourURL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Condition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlotSizeSquareMeters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfParkingSpaces)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBalconies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfAirCondition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBedrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBathrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsFurnishing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasPool)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasGarden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasElevator)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasAlarm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasFireplace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasPlayroom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasAtticLoft)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasStorageRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasSauna)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
