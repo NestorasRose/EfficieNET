@@ -1,4 +1,4 @@
-﻿using Fluent.Infrastructure.FluentModel;
+﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,7 +18,7 @@ namespace VRtour.Lib.Models
         public string UserId { get; set; }
 
         [ForeignKey("UserId")]
-        public virtual ApplicationUser User { get; set; }
+        public virtual IdentityUser User { get; set; }
 
         public decimal Price { get; set; }
 
