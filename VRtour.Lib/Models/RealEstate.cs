@@ -14,10 +14,8 @@ namespace VRtour.Lib.Models
             CreatedDate = DateTime.Now;
         }
 
-        [Key]
         public string UserId { get; set; }
 
-        [ForeignKey("UserId")]
         public virtual IdentityUser User { get; set; }
 
         public decimal Price { get; set; }
